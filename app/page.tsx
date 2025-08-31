@@ -81,7 +81,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3 text-sm">
               <a
                 className="rounded-md px-3 py-2 hover:bg-blue-600/10"
-                href="https://linkedin.com/in/mahendra-gaddam"
+                href="https://www.linkedin.com/in/mahendra-gaddam-a77221299/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -97,7 +97,7 @@ export default function HomePage() {
               </a>
               <a
                 className="rounded-md px-3 py-2 hover:bg-blue-600/10"
-                href="https://credly.com/mahendra-gaddam"
+                href="https://www.credly.com/users/mahendra-gaddam.703927f9/badges#credly"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -450,7 +450,7 @@ export default function HomePage() {
               <li>
                 <strong>LinkedIn:</strong>{" "}
                 <a
-                  href="https://linkedin.com/in/mahendra-gaddam"
+                  href="https://www.linkedin.com/in/mahendra-gaddam-a77221299/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline decoration-blue-600/30 underline-offset-4"
@@ -480,7 +480,7 @@ export default function HomePage() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/mahendra-gaddam"
+              href="https://www.linkedin.com/in/mahendra-gaddam-a77221299/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
@@ -496,7 +496,7 @@ export default function HomePage() {
               WhatsApp
             </a>
             <a
-              href="https://credly.com/mahendra-gaddam"
+              href="https://www.credly.com/users/mahendra-gaddam.703927f9/badges#credly"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
