@@ -40,6 +40,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        // app/head.tsx
+      export default function Head() {
+        return (
+          <>
+            <title>Mahendra Gaddam — Portfolio</title>
+            <link rel="icon" href="/icon.png" type="image/png" />
+          </>
+        )
+      }
+
         <Script id="theme-init" strategy="beforeInteractive">
           {`
             (function() {
