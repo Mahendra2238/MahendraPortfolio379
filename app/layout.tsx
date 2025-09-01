@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Full‑Stack and AI/ML projects. Education, experience, skills, and contact.",
     type: "website",
   },
-  metadataBase: new URL("https://example.com"), // replace with your final domain
+  metadataBase: new URL("https://mahendraportfolio379.vercel.app/"), // replace with your final domain
   icons: {
     icon: "/icon.png", // favicon path in public folder
   },
