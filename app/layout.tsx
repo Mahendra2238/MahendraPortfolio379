@@ -10,7 +10,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Mahendra Gaddam — Portfolio",
   description:
-    "Computer Science Engineer | Full‑Stack Developer & AI/ML Enthusiast. Explore projects, skills, internships, education, and contact.",
+    "Computer Science Engineer | Full-Stack Developer & AI/ML Enthusiast. Explore projects, skills, internships, education, and contact.",
   generator: "v0.app",
   keywords: [
     "Mahendra Gaddam",
@@ -26,12 +26,19 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Mahendra Gaddam — Portfolio",
-    description: "Full‑Stack and AI/ML projects. Education, experience, skills, and contact.",
+    description:
+      "Full-Stack and AI/ML projects. Education, experience, skills, and contact.",
     type: "website",
+    url: "https://mahendraportfolio379.vercel.app/",
   },
-  metadataBase: new URL("https://mahendraportfolio379.vercel.app/"), // replace with your final domain
+  metadataBase: new URL("https://mahendraportfolio379.vercel.app/"),
   icons: {
-    icon: "/icon.png", // favicon path in public folder
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "32x32" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 }
 
@@ -42,7 +49,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`min-h-dvh antialiased font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body
+        className={`min-h-dvh antialiased font-sans ${GeistSans.variable} ${GeistMono.variable}`}
+      >
         {/* Theme initialization script */}
         <Script id="theme-init" strategy="beforeInteractive">
           {`
