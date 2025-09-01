@@ -6,21 +6,6 @@ import { useReveal } from "@/hooks/use-reveal"
 import { SkillBar } from "@/components/skill-bar"
 import { ContactForm } from "@/components/contact-form"
 
-<a
-  className="inline-flex h-10 items-center justify-center gap-2 rounded-lg border bg-card px-4 transition hover:shadow-lg"
-  href="mahendraportfolio379.vercel.app"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <Image
-    src="/icon.png" // path to your favicon/logo
-    alt="Portfolio Logo"
-    width={20}
-    height={20}
-  />
-  My Portfolio
-</a>
-
 function Section({
   id,
   title,
