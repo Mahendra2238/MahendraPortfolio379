@@ -221,7 +221,7 @@ export default function HomePage() {
         <div className="mt-8 rounded-xl border bg-card p-4 shadow-sm space-y-2">
           <h3 className="text-base font-semibold">Tools & Platforms</h3>
           <ul className="flex flex-wrap gap-2 text-sm">
-            {["AWS", "Git", "GitHub", "Linux", "Google Colab", "VS Code"].map((s) => (
+            {["AWS", "Git", "GitHub", "Linux", "Google Colab", "Jupyter Notebook", "VS Code"].map((s) => (
               <li
                 key={s}
                 className="rounded-md bg-emerald-500/10 px-2 py-1 text-emerald-700 dark:text-emerald-300"
