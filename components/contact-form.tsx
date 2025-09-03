@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzX_PNtLxcPhaYK0hN4Fh-FDufUOS-pHWUJ-b8CBhpe32XF6UZW2CGKUEk4QLVH57BXiw/exec" // REQUIRED: e.g. "https://script.google.com/macros/s/AKfycbx.../exec"
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzyvmCOOYLwkbaua4sjC-esgnntpp8ON9YdHpA9ycfqzs-doQPp4_ZIDPmXv14lM9kX/exec" // REQUIRED: e.g. "https://script.google.com/macros/s/AKfycbx.../exec"
 // https://docs.google.com/spreadsheets/d/1ddNna0iqW-iNS5UV4x9cjU_mnZ0LGfhSo2KpzE1fI2I/edit?gid=0#gid=0  (google spread sheet)
 export function ContactForm() {
   const [status, setStatus] = useState<{ type: "idle" | "sending" | "ok" | "err"; msg: string }>({
