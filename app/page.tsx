@@ -133,7 +133,7 @@ export default function HomePage() {
       {/* About */}
       <Section id="about" title="About">
         <p className="text-muted-foreground">
-          I’m a Computer Science Engineer skilled in Python, Java, web development, and AI/ML. I enjoy solving complex problems, building reliable applications, and adapting quickly to new technologies. With strong academics and diverse projects, I’m ready to contribute to software development roles across domains.
+          I’m a Computer Science Student skilled in Python, Java, web development, and AI/ML. I enjoy solving complex problems, building reliable applications, and adapting quickly to new technologies. With strong academics and diverse projects, I’m ready to contribute to software development roles across domains.
         </p>
         <div className="grid gap-3 md:grid-cols-3">
           <div className="rounded-xl border bg-card p-4 shadow-sm">
