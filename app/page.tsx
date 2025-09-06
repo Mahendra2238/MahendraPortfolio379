@@ -52,7 +52,7 @@ export default function HomePage() {
               </a>
               <a
                 className="inline-flex h-10 items-center justify-center rounded-lg border bg-card px-4 transition hover:shadow-lg"
-                href="/assets/resume/ResumeM.pdf"
+                href="/assets/resume/Resume.pdf"
                 download
               >
                 Download Resume
@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="rounded-xl border bg-card p-4 shadow-sm space-y-2">
             <h3 className="text-base font-semibold">Web Development</h3>
             <ul className="flex flex-wrap gap-2 text-sm">
-              {["HTML", "CSS", "JavaScript", "PHP", "AngularJS"].map((s) => (
+              {["HTML", "CSS", "JavaScript", "PHP", "AngularJS", "MERN Stack", "REST APIs"].map((s) => (
                 <li
                   key={s}
                   className="rounded-md bg-emerald-500/10 px-2 py-1 text-emerald-700 dark:text-emerald-300"
@@ -409,7 +409,7 @@ export default function HomePage() {
         <div className="flex flex-wrap gap-3">
           <a
             className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-600 px-4 text-white transition hover:shadow-lg dark:bg-blue-500"
-            href="/assets/resume/ResumeM.pdf"
+            href="/assets/resume/Resume.pdf"
             download
           >
             Download Resume
