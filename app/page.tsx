@@ -238,7 +238,7 @@ export default function HomePage() {
         <ol className="border-l-2 border-dashed pl-4">
           {[
             {
-              title: "Full Stack Web Development Intern — A.N.D Intern",
+              title: "Full Stack Web Development Intern (Virtual) — A.N.D Intern",
               meta: "Jun 2024 – Aug 2024 (Virtual)",
               points: [
                 "Built web apps including portfolio, form validation, Amazon landing page, and weather API integration.",
@@ -247,7 +247,7 @@ export default function HomePage() {
               ],
             },
             {
-              title: "AI & ML Intern — Gustovalley Technovations",
+              title: "AI & ML Intern (Virtual) — Gustovalley Technovations",
               meta: "Apr 2024 – May 2024 (Virtual)",
               points: [
                 "Explored supervised learning concepts and dataset preprocessing using NumPy and Pandas.",
