@@ -36,8 +36,12 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-16 md:grid-cols-[1.2fr_.8fr]">
           <div className="space-y-4">
             <h1 className="text-balance text-2xl font-bold md:text-5xl">
-              Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mahendra</span> — Final-Year CSE Student | Software Developer (Full-Stack & AI/ML)
+              Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mahendra</span>
             </h1>
+            <p className="mt-2 text-lg md:text-2xl text-gray-700 dark:text-gray-300">
+              Software & Full-Stack Developer | AI/ML Enthusiast | Final-Year CSE Student
+            </p>
+
       
             <p className="text-muted-foreground">
               Motivated Computer Science Engineer with strong programming and problem-solving skills. I design scalable software and modern web applications, and actively explore AI/ML to solve real-world problems.
