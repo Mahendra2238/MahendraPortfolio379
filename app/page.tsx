@@ -128,7 +128,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section> */} */}
+      </section> */} 
       {/* Home / Hero */}
       <section id="home" className="scroll-mt-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-16 md:grid-cols-[1.2fr_.8fr]">
