@@ -31,10 +31,10 @@ export default function HomePage() {
     <>
       <Navbar />
       {/* Home / Hero */}
-{/*       <section id="home" className="scroll-mt-24">
+      <section id="home" className="scroll-mt-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-16 md:grid-cols-[1.2fr_.8fr]">
           <div className="space-y-4">
-            <h1 className="text-balance text-3xl font-bold md:text-5xl">
+            <h1 className="text-balance text-2xl font-bold md:text-5xl">
               Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mahendra</span> — Final-Year CSE Student | Software Developer (Full-Stack & AI/ML)
             </h1>
 
@@ -128,103 +128,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section> */} 
-      {/* Home / Hero */}
-      <section id="home" className="scroll-mt-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-16 md:grid-cols-[1.2fr_.8fr]">
-          {/* Left Content */}
-          <div className="space-y-5">
-            <h1 className="text-balance text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
-              Hi 👋, I&apos;m 
-              <span className="text-blue-600 dark:text-blue-400"> Mahendra</span>
-            </h1>
-            <h2 className="text-lg font-medium text-muted-foreground md:text-xl">
-              Final-Year CSE Student · Full-Stack & AI/ML Developer
-            </h2>
-      
-            <p className="text-muted-foreground max-w-xl">
-              Motivated Computer Science Engineer with strong programming and problem-solving skills. 
-              I design scalable software and modern web applications, and actively explore AI/ML 
-              to solve real-world problems.
-            </p>
-      
-            {/* Primary CTA */}
-            <div className="flex gap-3">
-              <a
-                className="inline-flex h-11 items-center justify-center rounded-lg bg-blue-600 px-5 text-white font-medium shadow-sm transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
-                href="/assets/resume/Resume.pdf"
-                download
-              >
-                Download Resume
-              </a>
-            </div>
-      
-            {/* Social Links */}
-            <div className="flex gap-4 text-xl text-muted-foreground">
-              <a
-                href="https://github.com/Mahendra2238"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-blue-600"
-                aria-label="GitHub"
-              >
-                <i className="fa-brands fa-github"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mahendra-gaddam-a77221299/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-blue-600"
-                aria-label="LinkedIn"
-              >
-                <i className="fa-brands fa-linkedin"></i>
-              </a>
-              <a
-                href="https://www.credly.com/users/mahendra-gaddam.703927f9/badges#credly"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition hover:text-blue-600"
-                aria-label="Credly"
-              >
-                <i className="fa-solid fa-certificate"></i>
-              </a>
-              <a
-                href="mailto:mahendragaddam379@gmail.com"
-                className="transition hover:text-blue-600"
-                aria-label="Email"
-              >
-                <i className="fa-solid fa-envelope"></i>
-              </a>
-            </div>
-          </div>
-      
-          {/* Right Profile Image + Stats */}
-          <div className="grid gap-4">
-            <Image
-              src="/mahiphoto.jpg"
-              alt="Mahendra Portrait"
-              width={280}
-              height={280}
-              className="h-56 w-56 rounded-xl border object-cover object-top shadow-xl md:h-75 md:w-72 md:justify-self-end"
-            />
-            <div className="flex gap-3">
-              {[
-                { value: "9.28", label: "B.Tech CGPA" },
-                { value: "2", label: "Internships" },
-                { value: "10+", label: "Projects" },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="min-w-[110px] flex-1 rounded-xl border bg-card p-3 text-center shadow-sm"
-                >
-                  <div className="text-xl font-extrabold">{s.value}</div>
-                  <div className="text-sm text-muted-foreground">{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      </section> 
 
 
       {/* About */}
