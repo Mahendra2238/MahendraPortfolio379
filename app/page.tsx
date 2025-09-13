@@ -81,12 +81,12 @@ export default function HomePage() {
                   mahendragaddam379@gmail.com
                 </a>
               </li>
-              <li>
+{/*               <li>
                 <strong>Phone:</strong>{" "}
                 <a href="tel:+917659072238" className="underline decoration-blue-600/30 underline-offset-4">
                   +91 7659072238
                 </a>
-              </li>
+              </li> */}
               <li>
                 <strong>Location:</strong> Warangal, India
               </li>
@@ -358,14 +358,14 @@ export default function HomePage() {
                   >
                     GitHub ↗
                   </a>
-                  <a
+{/*                   <a
                     className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-green-600/10"
                     href={p.demo}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Live Demo ↗
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </article>
