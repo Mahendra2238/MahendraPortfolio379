@@ -35,9 +35,9 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-16 md:grid-cols-[1.2fr_.8fr]">
           <div className="space-y-4">
             <h1 className="text-balance text-3xl font-bold md:text-5xl">
-              Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mahendra</span> — Full‑Stack Developer &
-              AI/ML Enthusiast
+              Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mahendra</span> — Final-Year CSE Student | Software Developer (Full-Stack & AI/ML)
             </h1>
+
             <p className="text-muted-foreground">
               Motivated Computer Science Engineer with strong programming and problem-solving skills. I design scalable software and modern web applications, and actively explore AI/ML to solve real-world problems.
             </p>
@@ -318,27 +318,27 @@ export default function HomePage() {
             {
               title: "Movie Ticket Booking Interface",
               desc: "Interactive booking interface with dynamic seat selection and mock payment UI. Improved booking simulation efficiency by 30% and reduced errors by 20% with responsive design and validation.",
+              tools: "HTML, CSS, JavaScript",
               img: "/movie-ticket-ui.png",
               link: "https://github.com/search?q=Movie+Ticket+Booking+user%3AMahendra2238",
+              demo: "https://movie-ticket-demo.vercel.app", // replace with actual demo
             },
             {
-              title: "Sign Language Recognition",
+              title: "Real-Time Sign Language Recognition (CNN + OpenCV)",
               desc: "CNN-based model recognizing common sign gestures with ~85% accuracy on 1,000+ images. Real-time detection pipeline using OpenCV and preprocessing to reduce false predictions by 15%.",
+              tools: "Python, TensorFlow, OpenCV, NumPy",
               img: "/sign-language-recognition.png",
               link: "https://github.com/search?q=Sign+Language+Recognition+user%3AMahendra2238",
+              demo: "https://signlang-demo.vercel.app", // replace with actual demo
             },
             {
               title: "Online Invoice Generation System",
               desc: "Full-stack Java (JSP/Servlets) app with multi-user roles, product/customer management, secure login dashboards, and PDF downloads. Efficiently handled 1,000+ records.",
+              tools: "Java, JSP, Servlets, MySQL, AngularJS",
               img: "/invoice-system.png",
               link: "https://github.com/Mahendra2238/Online_Invoice_Generation_System.git",
+              demo: "https://invoice-demo.vercel.app", // replace with actual demo
             },
-            // {
-            //   title: "Personal Portfolio (This Site)",
-            //   desc: "Redesigned with light/dark mode, scroll animations, responsive navigation, SEO meta tags, and a Google Sheets-powered contact form.",
-            //   img: "/portfolio-ui.png",
-            //   link: "https://github.com/Mahendra2238/portfolio",
-            // },
           ].map((p) => (
             <article
               key={p.title}
@@ -356,20 +356,29 @@ export default function HomePage() {
               <div className="space-y-2 p-4">
                 <h3 className="text-base font-semibold">{p.title}</h3>
                 <p className="text-sm text-muted-foreground">{p.desc}</p>
-                <div>
+                <p className="text-xs text-muted-foreground"><strong>Tools:</strong> {p.tools}</p>
+                <div className="flex gap-3">
                   <a
                     className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-blue-600/10"
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View on GitHub
-                    <span aria-hidden>↗</span>
+                    GitHub ↗
+                  </a>
+                  <a
+                    className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-green-600/10"
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo ↗
                   </a>
                 </div>
               </div>
             </article>
           ))}
+          
         </div>
       </Section>
 
