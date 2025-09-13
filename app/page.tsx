@@ -30,6 +30,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
+
       {/* Home / Hero */}
       <section id="home" className="scroll-mt-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-16 md:grid-cols-[1.2fr_.8fr]">
@@ -37,10 +38,12 @@ export default function HomePage() {
             <h1 className="text-balance text-2xl font-bold md:text-5xl">
               Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mahendra</span> — Final-Year CSE Student | Software Developer (Full-Stack & AI/ML)
             </h1>
-
+      
             <p className="text-muted-foreground">
               Motivated Computer Science Engineer with strong programming and problem-solving skills. I design scalable software and modern web applications, and actively explore AI/ML to solve real-world problems.
             </p>
+      
+            {/* Main CTAs */}
             <div className="flex flex-wrap gap-3">
               <a
                 className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-600 px-4 text-white transition hover:shadow-lg dark:bg-blue-500"
@@ -57,7 +60,17 @@ export default function HomePage() {
               >
                 Download Resume
               </a>
+              <a
+                className="inline-flex h-10 items-center justify-center rounded-lg border bg-card px-4 transition hover:shadow-lg"
+                href="https://www.linkedin.com/in/mahendra-gaddam-a77221299/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
             </div>
+      
+            {/* Contact Info */}
             <ul className="grid list-none gap-1 p-0 text-sm">
               <li>
                 <strong>Email:</strong>{" "}
@@ -68,44 +81,19 @@ export default function HomePage() {
                   mahendragaddam379@gmail.com
                 </a>
               </li>
-              {/* <li>
+              <li>
                 <strong>Phone:</strong>{" "}
                 <a href="tel:+917659072238" className="underline decoration-blue-600/30 underline-offset-4">
                   +91 7659072238
                 </a>
-              </li> */}
-{/*               <li>
+              </li>
+              <li>
                 <strong>Location:</strong> Warangal, India
               </li>
             </ul>
-            <div className="flex flex-wrap gap-3 text-sm">
-              <a
-                className="rounded-md px-3 py-2 hover:bg-blue-600/10"
-                href="https://www.linkedin.com/in/mahendra-gaddam-a77221299/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-              <a
-                className="rounded-md px-3 py-2 hover:bg-blue-600/10"
-                href="https://github.com/Mahendra2238"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                className="rounded-md px-3 py-2 hover:bg-blue-600/10"
-                href="https://www.credly.com/users/mahendra-gaddam.703927f9/badges#credly"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Credly
-              </a>
-            </div>
           </div>
-
+      
+          {/* Photo & Stats */}
           <div className="grid gap-4">
             <Image
               src="/mahiphoto.jpg"
@@ -120,7 +108,10 @@ export default function HomePage() {
                 { value: "2", label: "Internships" },
                 { value: "10+", label: "Projects" },
               ].map((s) => (
-                <div key={s.label} className="min-w-[110px] flex-1 rounded-xl border bg-card p-3 text-center shadow-sm">
+                <div
+                  key={s.label}
+                  className="min-w-[110px] flex-1 rounded-xl border bg-card p-3 text-center shadow-sm"
+                >
                   <div className="text-xl font-extrabold">{s.value}</div>
                   <div className="text-sm text-muted-foreground">{s.label}</div>
                 </div>
@@ -128,8 +119,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section> 
-
+      </section>
+      
 
       {/* About */}
       <Section id="about" title="About">
