@@ -103,7 +103,7 @@ export default function HomePage() {
               src="/mahiphoto.jpg"
               alt="Portrait"
               width={280}
-              height={280}
+              height={300}
               className="h-56 w-56 rounded-xl border object-cover object-top shadow-xl md:h-75 md:w-72 md:justify-self-end"
             />
             <div className="flex gap-3">
