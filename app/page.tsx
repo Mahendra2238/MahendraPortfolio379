@@ -331,7 +331,7 @@ export default function HomePage() {
               title: "Deepfake Detection & Attribution System",
               desc: "Multi-modal deepfake detection system identifying manipulated images, audio, and videos using deep learning. High-accuracy CNN-based pipelines with real-time inference for media authenticity verification.",
               tools: "Python, PyTorch, TensorFlow, CNN, XceptionNet",
-              img: "/deepfake-detection.png", // optional, fallback works if missing
+              img: "/deepfake-detection.jpeg", 
               link: "https://github.com/Mahendra2238/Deepfake-Detection-And-Attribution.git",
             },
             {
