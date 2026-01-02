@@ -328,6 +328,13 @@ export default function HomePage() {
               // demo: "https://signlang-demo.vercel.app", // replace with actual demo
             },
             {
+              title: "Deepfake Detection & Attribution System",
+              desc: "Multi-modal deepfake detection system identifying manipulated images, audio, and videos using deep learning. High-accuracy CNN-based pipelines with real-time inference for media authenticity verification.",
+              tools: "Python, PyTorch, TensorFlow, CNN, XceptionNet",
+              img: "/deepfake-detection.png", // optional, fallback works if missing
+              link: "https://github.com/Mahendra2238/Deepfake-Detection-And-Attribution.git",
+            },
+            {
               title: "Online Invoice Generation System",
               desc: "Full-stack Java (JSP/Servlets) app with multi-user roles, product/customer management, secure login dashboards, and PDF downloads. Efficiently handled 1,000+ records.",
               tools: "Java, JSP, Servlets, MySQL, AngularJS",
@@ -381,6 +388,16 @@ export default function HomePage() {
       {/* Certifications */}
       <Section id="certifications" title="Certifications & Courses">
         <ul className="grid gap-3">
+              <li className="flex items-center justify-between rounded-xl border bg-card p-4 shadow-sm">
+            <span>ServiceNow Certified System Administrator (CSA)</span>
+            <a
+              href="https://drive.google.com/file/d/1z0D25igkCXTEyMLL35pj4J25ZLHnM8WO/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:underline">
+              View
+            </a>
+          </li>
           <li className="flex items-center justify-between rounded-xl border bg-card p-4 shadow-sm">
             <span>Theory of Computation — NPTEL</span>
             <a href="https://drive.google.com/file/d/1vQe8soNMnOta_PoRxA5Un6MPuowbuLFl/view" className="text-sm text-blue-600 hover:underline" aria-label="View NPTEL certificate">
