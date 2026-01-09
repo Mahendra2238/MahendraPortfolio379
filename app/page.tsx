@@ -252,7 +252,7 @@ export default function HomePage() {
               ],
             },
             {
-              title: "Trainee (Python & ASP.NET) — Softwayz IT Solutions",
+              title: "Trainee (Python) — Softwayz IT Solutions",
               meta: "Dec 2022 – May 2023",
               points: [
                 "Practiced Python fundamentals with hands-on tasks.",
