@@ -121,7 +121,7 @@ export default function HomePage() {
               alt="Portrait"
               width={280}
               height={300}
-              className="h-60 w-56 rounded-xl border object-cover object-top shadow-xl md:h-75 md:w-72 md:justify-self-end"
+              className="h-60 w-56 justify-self-center rounded-xl border object-cover object-top shadow-xl md:h-75 md:w-72 md:justify-self-end"
             />
             <div className="flex gap-3">
               {[
@@ -338,7 +338,7 @@ export default function HomePage() {
         <div className="relative group">
           <button 
             onClick={scrollLeft}
-            className="absolute left-0 md:-left-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            className="absolute left-1 md:-left-5 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-5 w-5" />
@@ -398,7 +398,7 @@ export default function HomePage() {
           ].map((p) => (
             <article
               key={p.title}
-              className="group w-[85vw] sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-start overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
+              className="group w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-start overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
             >
               <div className="overflow-hidden border-b">
                 <Image
@@ -438,7 +438,7 @@ export default function HomePage() {
 
           <button 
             onClick={scrollRight}
-            className="absolute right-0 md:-right-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            className="absolute right-1 md:-right-5 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
             aria-label="Scroll right"
           >
             <ChevronRight className="h-5 w-5" />
