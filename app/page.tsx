@@ -32,15 +32,21 @@ export default function HomePage() {
 
   const scrollLeft = () => {
     if (scrollRef.current && scrollRef.current.firstElementChild) {
-      const scrollAmount = scrollRef.current.firstElementChild.clientWidth + 16; // Include gap-4 (16px)
-      scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      const scrollAmount = scrollRef.current.firstElementChild.clientWidth + 16;
+      scrollRef.current.scrollTo({
+        left: scrollRef.current.scrollLeft - scrollAmount,
+        behavior: "smooth"
+      });
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current && scrollRef.current.firstElementChild) {
       const scrollAmount = scrollRef.current.firstElementChild.clientWidth + 16;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      scrollRef.current.scrollTo({
+        left: scrollRef.current.scrollLeft + scrollAmount,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -347,7 +353,7 @@ export default function HomePage() {
 
           <div 
             ref={scrollRef} 
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 [&::-webkit-scrollbar]:hidden"
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide pb-4 [&::-webkit-scrollbar]:hidden"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {[
@@ -410,15 +416,15 @@ export default function HomePage() {
                   className="aspect-[18/10] w-full object-cover transition group-hover:scale-[1.02]"
                 />
                 <button 
-                  onClick={(e) => { e.preventDefault(); scrollLeft(); }}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md hover:bg-accent"
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollLeft(); }}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-50 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md hover:bg-accent cursor-pointer"
                   aria-label="Scroll left"
                 >
                   <ChevronLeft className="h-6 w-6" />
                 </button>
                 <button 
-                  onClick={(e) => { e.preventDefault(); scrollRight(); }}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md hover:bg-accent"
+                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollRight(); }}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-50 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md hover:bg-accent cursor-pointer"
                   aria-label="Scroll right"
                 >
                   <ChevronRight className="h-6 w-6" />
