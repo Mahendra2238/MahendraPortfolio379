@@ -1,6 +1,7 @@
 "use client";
-import type React from "react"
+import React, { useRef } from "react"
 import Image from "next/image"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { useReveal } from "@/hooks/use-reveal"
 import { SkillBar } from "@/components/skill-bar"
@@ -27,6 +28,22 @@ function Section({
 }
 
 export default function HomePage() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.clientWidth;
+      scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.clientWidth;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -36,7 +53,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-16 md:grid-cols-[1.2fr_.8fr]">
           <div className="space-y-4">
             <h1 className="text-balance text-2xl font-bold md:text-5xl">
-              Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Mahendra</span>
+              Hi, I&apos;m <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 bg-clip-text text-transparent animate-in fade-in zoom-in duration-1000">Mahendra</span>
             </h1>
             <p className="mt-2 text-lg md:text-2xl text-gray-700 dark:text-gray-300">
               Software & Full-Stack Developer | AI/ML Enthusiast | Final-Year CSE Student
@@ -50,7 +67,7 @@ export default function HomePage() {
             {/* Main CTAs */}
             <div className="flex flex-wrap gap-3">
               <a
-                className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-600 px-4 text-white transition hover:shadow-lg dark:bg-blue-500"
+                className="relative inline-flex h-10 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-6 font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(79,70,229,0.4)]"
                 href="https://github.com/Mahendra2238"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,9 +131,9 @@ export default function HomePage() {
               ].map((s) => (
                 <div
                   key={s.label}
-                  className="min-w-[110px] flex-1 rounded-xl border bg-card p-3 text-center shadow-sm"
+                  className="group min-w-[110px] flex-1 rounded-xl border bg-card p-3 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-blue-500/20"
                 >
-                  <div className="text-xl font-extrabold">{s.value}</div>
+                  <div className="text-xl font-extrabold transition-colors group-hover:text-blue-600 group-hover:dark:text-blue-400">{s.value}</div>
                   <div className="text-sm text-muted-foreground">{s.label}</div>
                 </div>
               ))}
@@ -132,20 +149,20 @@ export default function HomePage() {
           I’m a Computer Science Student skilled in Python, Java, web development, and AI/ML. I enjoy solving complex problems, building reliable applications, and adapting quickly to new technologies. With strong academics and diverse projects, I’m ready to contribute to software development roles across domains.
         </p>
         <div className="grid gap-3 md:grid-cols-3">
-          <div className="rounded-xl border bg-card p-4 shadow-sm">
-            <h3 className="mb-1 text-base font-semibold">What I Do</h3>
+          <div className="group rounded-xl border bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10">
+            <h3 className="mb-1 text-base font-semibold group-hover:text-blue-600 transition-colors">What I Do</h3>
             <p className="text-sm text-muted-foreground">
               Design and develop scalable software and web applications with clean architecture, efficient code, and responsive UI.
             </p>
           </div>
-          <div className="rounded-xl border bg-card p-4 shadow-sm">
-            <h3 className="mb-1 text-base font-semibold">Strengths</h3>
+          <div className="group rounded-xl border bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10">
+            <h3 className="mb-1 text-base font-semibold group-hover:text-indigo-600 transition-colors">Strengths</h3>
             <p className="text-sm text-muted-foreground">
               Strong problem-solving, teamwork, leadership, and adaptability—applied across software development projects and collaborative environments.
             </p>
           </div>
-          <div className="rounded-xl border bg-card p-4 shadow-sm">
-            <h3 className="mb-1 text-base font-semibold">Languages</h3>
+          <div className="group rounded-xl border bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10">
+            <h3 className="mb-1 text-base font-semibold group-hover:text-purple-600 transition-colors">Languages</h3>
             <p className="text-sm text-muted-foreground">
               English (Fluent), Hindi (Fluent), Telugu (Native), Spanish (Beginner)
             </p>
@@ -163,7 +180,7 @@ export default function HomePage() {
               {["C", "Python", "Java", "C++", "C#", "SQL"].map((s) => (
                 <li
                   key={s}
-                  className="rounded-md bg-emerald-500/10 px-2 py-1 text-emerald-700 dark:text-emerald-300"
+                  className="rounded-md bg-emerald-500/10 px-2 py-1 text-emerald-700 dark:text-emerald-300 transition-all hover:-translate-y-0.5 hover:bg-emerald-500/20 hover:shadow-sm cursor-default"
                 >
                   {s}
                 </li>
@@ -318,8 +335,21 @@ export default function HomePage() {
 
       {/* Projects */}
       <Section id="projects" title="Projects">
-        <div className="grid gap-4 md:grid-cols-2">
-          {[
+        <div className="relative group">
+          <button 
+            onClick={scrollLeft}
+            className="absolute left-0 md:-left-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+
+          <div 
+            ref={scrollRef} 
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 [&::-webkit-scrollbar]:hidden"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {[
             {
               title: "Movie Ticket Booking Interface",
               desc: "Interactive booking interface with dynamic seat selection and mock payment UI. Improved booking simulation efficiency by 30% and reduced errors by 20% with responsive design and validation.",
@@ -368,7 +398,7 @@ export default function HomePage() {
           ].map((p) => (
             <article
               key={p.title}
-              className="group overflow-hidden rounded-xl border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
+              className="group w-[85vw] sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-start overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
             >
               <div className="overflow-hidden border-b">
                 <Image
@@ -404,7 +434,15 @@ export default function HomePage() {
               </div>
             </article>
           ))}
-          
+          </div>
+
+          <button 
+            onClick={scrollRight}
+            className="absolute right-0 md:-right-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
       </Section>
 
@@ -463,9 +501,9 @@ export default function HomePage() {
       {/* Resume */}
       <Section id="resume" title="Resume">
         <p className="text-sm text-muted-foreground">Download a copy of my resume or request one via email.</p>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3 mt-4">
           <a
-            className="inline-flex h-10 items-center justify-center rounded-lg border bg-blue-600 px-4 text-white transition hover:shadow-lg dark:bg-blue-500"
+            className="relative inline-flex h-10 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-6 font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(79,70,229,0.4)]"
             href="/assets/resume/Resume.pdf"
             download
           >
