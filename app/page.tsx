@@ -372,7 +372,7 @@ export default function HomePage() {
               link: "https://github.com/Mahendra2238/Campus-Information-Retrieval-Assistant.git",
             },
           ].map((p) => (
-            <CarouselItem key={p.title} className="pl-4 basis-[90%] md:basis-1/2 lg:basis-1/3">
+            <CarouselItem key={p.title} className="pl-4 basis-[280px] sm:basis-1/2 lg:basis-1/3">
               <article
                 className="group relative h-full overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
               >
