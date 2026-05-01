@@ -336,14 +336,6 @@ export default function HomePage() {
       {/* Projects */}
       <Section id="projects" title="Projects">
         <div className="relative group">
-          <button 
-            onClick={scrollLeft}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-
           <div 
             ref={scrollRef} 
             className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 [&::-webkit-scrollbar]:hidden"
@@ -398,9 +390,9 @@ export default function HomePage() {
           ].map((p) => (
             <article
               key={p.title}
-              className="group w-[280px] sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-center overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
+              className="group relative w-[90vw] sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-center overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
             >
-              <div className="overflow-hidden border-b">
+              <div className="relative overflow-hidden border-b">
                 <Image
                   src={p.img || "/placeholder.svg"}
                   alt={`${p.title} screenshot`}
@@ -408,6 +400,20 @@ export default function HomePage() {
                   height={400}
                   className="aspect-[18/10] w-full object-cover transition group-hover:scale-[1.02]"
                 />
+                <button 
+                  onClick={scrollLeft}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+                  aria-label="Scroll left"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </button>
+                <button 
+                  onClick={scrollRight}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </button>
               </div>
               <div className="space-y-2 p-4">
                 <h3 className="text-base font-semibold">{p.title}</h3>
@@ -435,14 +441,6 @@ export default function HomePage() {
             </article>
           ))}
           </div>
-
-          <button 
-            onClick={scrollRight}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
         </div>
       </Section>
 
