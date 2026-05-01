@@ -108,9 +108,9 @@ export default function HomePage() {
             />
             <div className="flex gap-3">
               {[
-                { value: "9.28", label: "B.Tech CGPA" },
+                { value: "9.0", label: "B.Tech CGPA" },
                 { value: "2", label: "Internships" },
-                { value: "10+", label: "Projects" },
+                { value: "20+", label: "Projects" },
               ].map((s) => (
                 <div
                   key={s.label}
