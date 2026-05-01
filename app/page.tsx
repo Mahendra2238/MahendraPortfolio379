@@ -6,6 +6,7 @@ import { Navbar } from "@/components/navbar"
 import { useReveal } from "@/hooks/use-reveal"
 import { SkillBar } from "@/components/skill-bar"
 import { ContactForm } from "@/components/contact-form"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 function Section({
   id,
@@ -28,27 +29,6 @@ function Section({
 }
 
 export default function HomePage() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (scrollRef.current && scrollRef.current.firstElementChild) {
-      const scrollAmount = scrollRef.current.firstElementChild.clientWidth + 16;
-      scrollRef.current.scrollTo({
-        left: scrollRef.current.scrollLeft - scrollAmount,
-        behavior: "smooth"
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current && scrollRef.current.firstElementChild) {
-      const scrollAmount = scrollRef.current.firstElementChild.clientWidth + 16;
-      scrollRef.current.scrollTo({
-        left: scrollRef.current.scrollLeft + scrollAmount,
-        behavior: "smooth"
-      });
-    }
-  };
 
   return (
     <>
@@ -341,21 +321,13 @@ export default function HomePage() {
 
       {/* Projects */}
       <Section id="projects" title="Projects">
-        <div className="relative group">
-          {/* Global Arrows (Desktop Only) */}
-          <button 
-            onClick={(e) => { e.preventDefault(); scrollLeft(); }}
-            className="absolute left-0 md:-left-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-
-          <div 
-            ref={scrollRef} 
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide pb-4 [&::-webkit-scrollbar]:hidden"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
+        <Carousel
+          opts={{
+            align: "center",
+          }}
+          className="w-full relative group"
+        >
+          <CarouselContent className="-ml-4">
             {[
             {
               title: "Movie Ticket Booking Interface",
@@ -363,7 +335,6 @@ export default function HomePage() {
               tools: "HTML, CSS, JavaScript",
               img: "/movie-ticket-ui.png",
               link: "https://github.com/search?q=Movie+Ticket+Booking+user%3AMahendra2238",
-              // demo: "https://movie-ticket-demo.vercel.app", // replace with actual demo
             },
             {
               title: "Real-Time Sign Language Recognition (CNN + OpenCV)",
@@ -371,7 +342,6 @@ export default function HomePage() {
               tools: "Python, TensorFlow, OpenCV, NumPy",
               img: "/sign-language-recognition.png",
               link: "https://github.com/search?q=Sign+Language+Recognition+user%3AMahendra2238",
-              // demo: "https://signlang-demo.vercel.app", // replace with actual demo
             },
             {
               title: "Deepfake Detection & Attribution System",
@@ -386,7 +356,6 @@ export default function HomePage() {
               tools: "Java, JSP, Servlets, MySQL, AngularJS",
               img: "/invoice-system.png",
               link: "https://github.com/Mahendra2238/Online_Invoice_Generation_System.git",
-              // demo: "https://invoice-demo.vercel.app", // replace with actual demo
             },
             {
               title: "UniEase – Unified Campus Life & Academic Assistant",
@@ -403,69 +372,42 @@ export default function HomePage() {
               link: "https://github.com/Mahendra2238/Campus-Information-Retrieval-Assistant.git",
             },
           ].map((p) => (
-            <article
-              key={p.title}
-              className="group relative w-[90vw] sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-center overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
-            >
-              <div className="relative overflow-hidden border-b">
-                <Image
-                  src={p.img || "/placeholder.svg"}
-                  alt={`${p.title} screenshot`}
-                  width={720}
-                  height={400}
-                  className="aspect-[18/10] w-full object-cover transition group-hover:scale-[1.02]"
-                />
-                <button 
-                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollLeft(); }}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 z-50 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md hover:bg-accent cursor-pointer"
-                  aria-label="Scroll left"
-                >
-                  <ChevronLeft className="h-6 w-6" />
-                </button>
-                <button 
-                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); scrollRight(); }}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 z-50 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md hover:bg-accent cursor-pointer"
-                  aria-label="Scroll right"
-                >
-                  <ChevronRight className="h-6 w-6" />
-                </button>
-              </div>
-              <div className="space-y-2 p-4">
-                <h3 className="text-base font-semibold">{p.title}</h3>
-                <p className="text-sm text-muted-foreground">{p.desc}</p>
-                <p className="text-xs text-muted-foreground"><strong>Tools:</strong> {p.tools}</p>
-                <div className="flex gap-3">
-                  <a
-                    className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-blue-600/10"
-                    href={p.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub ↗
-                  </a>
-{/*                   <a
-                    className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-green-600/10"
-                    href={p.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo ↗
-                  </a> */}
+            <CarouselItem key={p.title} className="pl-4 basis-[90%] md:basis-1/2 lg:basis-1/3">
+              <article
+                className="group relative h-full overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
+              >
+                <div className="relative overflow-hidden border-b">
+                  <Image
+                    src={p.img || "/placeholder.svg"}
+                    alt={`${p.title} screenshot`}
+                    width={720}
+                    height={400}
+                    className="aspect-[18/10] w-full object-cover transition group-hover:scale-[1.02]"
+                  />
                 </div>
-              </div>
-            </article>
+                <div className="space-y-2 p-4">
+                  <h3 className="text-base font-semibold">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground">{p.desc}</p>
+                  <p className="text-xs text-muted-foreground"><strong>Tools:</strong> {p.tools}</p>
+                  <div className="flex gap-3">
+                    <a
+                      className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-blue-600/10"
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub ↗
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </CarouselItem>
           ))}
-          </div>
-
-          {/* Global Arrows (Desktop Only) */}
-          <button 
-            onClick={(e) => { e.preventDefault(); scrollRight(); }}
-            className="absolute right-0 md:-right-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
-        </div>
+          </CarouselContent>
+          
+          <CarouselPrevious className="absolute left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
+          <CarouselNext className="absolute right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
+        </Carousel>
       </Section>
 
       {/* Certifications */}
