@@ -336,6 +336,15 @@ export default function HomePage() {
       {/* Projects */}
       <Section id="projects" title="Projects">
         <div className="relative group">
+          {/* Global Arrows (Desktop Only) */}
+          <button 
+            onClick={(e) => { e.preventDefault(); scrollLeft(); }}
+            className="absolute left-0 md:-left-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+
           <div 
             ref={scrollRef} 
             className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 [&::-webkit-scrollbar]:hidden"
@@ -401,18 +410,18 @@ export default function HomePage() {
                   className="aspect-[18/10] w-full object-cover transition group-hover:scale-[1.02]"
                 />
                 <button 
-                  onClick={scrollLeft}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+                  onClick={(e) => { e.preventDefault(); scrollLeft(); }}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md hover:bg-accent"
                   aria-label="Scroll left"
                 >
-                  <ChevronLeft className="h-4 w-4" />
+                  <ChevronLeft className="h-6 w-6" />
                 </button>
                 <button 
-                  onClick={scrollRight}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+                  onClick={(e) => { e.preventDefault(); scrollRight(); }}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex md:hidden h-10 w-10 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md hover:bg-accent"
                   aria-label="Scroll right"
                 >
-                  <ChevronRight className="h-4 w-4" />
+                  <ChevronRight className="h-6 w-6" />
                 </button>
               </div>
               <div className="space-y-2 p-4">
@@ -441,6 +450,15 @@ export default function HomePage() {
             </article>
           ))}
           </div>
+
+          {/* Global Arrows (Desktop Only) */}
+          <button 
+            onClick={(e) => { e.preventDefault(); scrollRight(); }}
+            className="absolute right-0 md:-right-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
         </div>
       </Section>
 
