@@ -338,10 +338,10 @@ export default function HomePage() {
         <div className="relative group">
           <button 
             onClick={scrollLeft}
-            className="absolute left-1 md:-left-5 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
             aria-label="Scroll left"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-4 w-4" />
           </button>
 
           <div 
@@ -438,10 +438,10 @@ export default function HomePage() {
 
           <button 
             onClick={scrollRight}
-            className="absolute right-1 md:-right-5 top-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 flex h-7 w-7 items-center justify-center rounded-full border bg-background/80 backdrop-blur shadow-md transition-all opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent"
             aria-label="Scroll right"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-4 w-4" />
           </button>
         </div>
       </Section>
