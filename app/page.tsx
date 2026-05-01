@@ -398,7 +398,7 @@ export default function HomePage() {
           ].map((p) => (
             <article
               key={p.title}
-              className="group w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-start overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
+              className="group w-[280px] sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.66rem)] flex-none snap-start overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
             >
               <div className="overflow-hidden border-b">
                 <Image
