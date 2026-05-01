@@ -405,8 +405,8 @@ export default function HomePage() {
           ))}
           </CarouselContent>
           
-          <CarouselPrevious className="absolute left-2 md:-left-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
-          <CarouselNext className="absolute right-2 md:-right-5 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
+          <CarouselPrevious className="absolute left-2 xl:-left-12 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
+          <CarouselNext className="absolute right-2 xl:-right-12 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
         </Carousel>
       </Section>
 
