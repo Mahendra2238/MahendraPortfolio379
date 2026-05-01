@@ -234,6 +234,15 @@ export default function HomePage() {
         <ol className="border-l-2 border-dashed pl-4">
           {[
             {
+              title: "LLM Post Trainee Intern — Ethara AI",
+              meta: "Feb 2026 – Present (Remote)",
+              points: [
+                "Evaluated AI-generated text, image, audio, and video outputs using quality metrics like accuracy, instruction following, and groundedness.",
+                "Worked on prompt engineering, annotation, comparative analysis, and visual description tasks.",
+                "Collaborated in AI evaluation workflows to identify model gaps and improve response reliability.",
+              ],
+            },
+            {
               title: "Full Stack Web Development Intern (Virtual) — A.N.D Intern",
               meta: "Jun 2024 – Aug 2024 (Virtual)",
               points: [
@@ -281,7 +290,7 @@ export default function HomePage() {
           {[
             {
               title: "SR University, Warangal",
-              desc: "B.Tech in Computer Science — CGPA: 9.28/10.0",
+              desc: "B.Tech in Computer Science — CGPA: 9.0/10.0",
               meta: "Aug 2023 – Jun 2026",
             },
             {
@@ -341,6 +350,20 @@ export default function HomePage() {
               img: "/invoice-system.png",
               link: "https://github.com/Mahendra2238/Online_Invoice_Generation_System.git",
               // demo: "https://invoice-demo.vercel.app", // replace with actual demo
+            },
+            {
+              title: "UniEase – Unified Campus Life & Academic Assistant",
+              desc: "All-in-one campus platform integrating academics, services, schedules, placements, and announcements with secure role-based access.",
+              tools: "Django, MySQL, HTML, CSS, JavaScript",
+              img: "/uniease.png",
+              link: "https://github.com/Mahendra2238/UniEase-unified-smart-campus-life-and-academic-assistant.git",
+            },
+            {
+              title: "CIRA – Campus Information Retrieval Assistant",
+              desc: "AI-powered assistant using SLM + RAG to provide accurate campus information and intelligent real-time query responses.",
+              tools: "Python, NLP, SLM, RAG",
+              img: "/cira.png",
+              link: "https://github.com/Mahendra2238/Campus-Information-Retrieval-Assistant.git",
             },
           ].map((p) => (
             <article
@@ -419,6 +442,18 @@ export default function HomePage() {
           <li className="flex items-center justify-between rounded-xl border bg-card p-4 shadow-sm">
             <span>Data Structures and Algorithms — UC San Diego (Coursera)</span>
             <a href="https://www.coursera.org/account/accomplishments/verify/HRXVG54QNZU5?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" className="text-sm text-blue-600 hover:underline" aria-label="View Coursera certificate">
+              View
+            </a>
+          </li>
+          <li className="flex items-center justify-between rounded-xl border bg-card p-4 shadow-sm">
+            <span>Full Stack Web Development with AI Tools — EY, Edunet Foundation & TASK</span>
+            <a
+              href="https://drive.google.com/file/d/1mqD9AjmEp55zNuzVKsfHgmVIsTNYDhxM/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:underline"
+              aria-label="View EY certificate"
+            >
               View
             </a>
           </li>
