@@ -31,15 +31,15 @@ export default function HomePage() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
-    if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.clientWidth;
+    if (scrollRef.current && scrollRef.current.firstElementChild) {
+      const scrollAmount = scrollRef.current.firstElementChild.clientWidth + 16; // Include gap-4 (16px)
       scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
-    if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.clientWidth;
+    if (scrollRef.current && scrollRef.current.firstElementChild) {
+      const scrollAmount = scrollRef.current.firstElementChild.clientWidth + 16;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
