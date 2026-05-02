@@ -103,7 +103,7 @@ export default function HomePage() {
           {/* Photo & Stats */}
           <div className="grid gap-4">
             <Image
-              src="/mahiphoto.jpg"
+              src="/mahiphoto.png"
               alt="Portrait"
               width={280}
               height={300}
