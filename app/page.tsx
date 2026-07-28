@@ -319,96 +319,109 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Projects */}
-      <Section id="projects" title="Projects">
-        <Carousel
-          opts={{
-            align: "center",
-          }}
-          className="w-full relative group"
+{/* Projects */}
+<Section id="projects" title="Projects">
+  <Carousel
+    opts={{
+      align: "center",
+      dragFree: true,
+      containScroll: "trimSnaps",
+    }}
+    className="relative w-full group touch-pan-y"
+  >
+    <CarouselContent className="-ml-4 cursor-grab active:cursor-grabbing">
+      {[
+        {
+          title: "Movie Ticket Booking Interface",
+          desc: "Interactive booking interface with dynamic seat selection and mock payment UI. Improved booking simulation efficiency by 30% and reduced errors by 20% with responsive design and validation.",
+          tools: "HTML, CSS, JavaScript",
+          img: "/movie-ticket-ui.png",
+          link: "https://github.com/search?q=Movie+Ticket+Booking+user%3AMahendra2238",
+        },
+        {
+          title: "Real-Time Sign Language Recognition (CNN + OpenCV)",
+          desc: "CNN-based model recognizing common sign gestures with ~85% accuracy on 1,000+ images. Real-time detection pipeline using OpenCV and preprocessing to reduce false predictions by 15%.",
+          tools: "Python, TensorFlow, OpenCV, NumPy",
+          img: "/sign-language-recognition.png",
+          link: "https://github.com/search?q=Sign+Language+Recognition+user%3AMahendra2238",
+        },
+        {
+          title: "Deepfake Detection & Attribution System",
+          desc: "Multi-modal deepfake detection system identifying manipulated images, audio, and videos using deep learning. High-accuracy CNN-based pipelines with real-time inference for media authenticity verification.",
+          tools: "Python, PyTorch, TensorFlow, CNN, XceptionNet",
+          img: "/deepfake-detection.jpeg",
+          link: "https://github.com/Mahendra2238/Deepfake-Detection-And-Attribution.git",
+        },
+        {
+          title: "Online Invoice Generation System",
+          desc: "Full-stack Java (JSP/Servlets) app with multi-user roles, product/customer management, secure login dashboards, and PDF downloads. Efficiently handled 1,000+ records.",
+          tools: "Java, JSP, Servlets, MySQL, AngularJS",
+          img: "/invoice-system.png",
+          link: "https://github.com/Mahendra2238/Online_Invoice_Generation_System.git",
+        },
+        {
+          title: "UniEase – Unified Campus Life & Academic Assistant",
+          desc: "All-in-one campus platform integrating academics, services, schedules, placements, and announcements with secure role-based access.",
+          tools: "Django, MySQL, HTML, CSS, JavaScript",
+          img: "/uniease.png",
+          link: "https://github.com/Mahendra2238/UniEase-unified-smart-campus-life-and-academic-assistant.git",
+        },
+        {
+          title: "CIRA – Campus Information Retrieval Assistant",
+          desc: "AI-powered assistant using SLM + RAG to provide accurate campus information and intelligent real-time query responses.",
+          tools: "Python, NLP, SLM, RAG",
+          img: "/cira.png",
+          link: "https://github.com/Mahendra2238/Campus-Information-Retrieval-Assistant.git",
+        },
+      ].map((p) => (
+        <CarouselItem
+          key={p.title}
+          className="pl-4 basis-[280px] sm:basis-1/2 lg:basis-1/3"
         >
-          <CarouselContent className="-ml-4">
-            {[
-            {
-              title: "Movie Ticket Booking Interface",
-              desc: "Interactive booking interface with dynamic seat selection and mock payment UI. Improved booking simulation efficiency by 30% and reduced errors by 20% with responsive design and validation.",
-              tools: "HTML, CSS, JavaScript",
-              img: "/movie-ticket-ui.png",
-              link: "https://github.com/search?q=Movie+Ticket+Booking+user%3AMahendra2238",
-            },
-            {
-              title: "Real-Time Sign Language Recognition (CNN + OpenCV)",
-              desc: "CNN-based model recognizing common sign gestures with ~85% accuracy on 1,000+ images. Real-time detection pipeline using OpenCV and preprocessing to reduce false predictions by 15%.",
-              tools: "Python, TensorFlow, OpenCV, NumPy",
-              img: "/sign-language-recognition.png",
-              link: "https://github.com/search?q=Sign+Language+Recognition+user%3AMahendra2238",
-            },
-            {
-              title: "Deepfake Detection & Attribution System",
-              desc: "Multi-modal deepfake detection system identifying manipulated images, audio, and videos using deep learning. High-accuracy CNN-based pipelines with real-time inference for media authenticity verification.",
-              tools: "Python, PyTorch, TensorFlow, CNN, XceptionNet",
-              img: "/deepfake-detection.jpeg", 
-              link: "https://github.com/Mahendra2238/Deepfake-Detection-And-Attribution.git",
-            },
-            {
-              title: "Online Invoice Generation System",
-              desc: "Full-stack Java (JSP/Servlets) app with multi-user roles, product/customer management, secure login dashboards, and PDF downloads. Efficiently handled 1,000+ records.",
-              tools: "Java, JSP, Servlets, MySQL, AngularJS",
-              img: "/invoice-system.png",
-              link: "https://github.com/Mahendra2238/Online_Invoice_Generation_System.git",
-            },
-            {
-              title: "UniEase – Unified Campus Life & Academic Assistant",
-              desc: "All-in-one campus platform integrating academics, services, schedules, placements, and announcements with secure role-based access.",
-              tools: "Django, MySQL, HTML, CSS, JavaScript",
-              img: "/uniease.png",
-              link: "https://github.com/Mahendra2238/UniEase-unified-smart-campus-life-and-academic-assistant.git",
-            },
-            {
-              title: "CIRA – Campus Information Retrieval Assistant",
-              desc: "AI-powered assistant using SLM + RAG to provide accurate campus information and intelligent real-time query responses.",
-              tools: "Python, NLP, SLM, RAG",
-              img: "/cira.png",
-              link: "https://github.com/Mahendra2238/Campus-Information-Retrieval-Assistant.git",
-            },
-          ].map((p) => (
-            <CarouselItem key={p.title} className="pl-4 basis-[280px] sm:basis-1/2 lg:basis-1/3">
-              <article
-                className="group relative h-full overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20"
-              >
-                <div className="relative overflow-hidden border-b">
-                  <Image
-                    src={p.img || "/placeholder.svg"}
-                    alt={`${p.title} screenshot`}
-                    width={720}
-                    height={400}
-                    className="aspect-[18/10] w-full object-cover transition group-hover:scale-[1.02]"
-                  />
-                </div>
-                <div className="space-y-2 p-4">
-                  <h3 className="text-base font-semibold">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground">{p.desc}</p>
-                  <p className="text-xs text-muted-foreground"><strong>Tools:</strong> {p.tools}</p>
-                  <div className="flex gap-3">
-                    <a
-                      className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-blue-600/10"
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub ↗
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </CarouselItem>
-          ))}
-          </CarouselContent>
-          
-          <CarouselPrevious className="absolute left-2 xl:-left-12 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
-          <CarouselNext className="absolute right-2 xl:-right-12 top-1/2 -translate-y-1/2 z-10 flex h-10 w-10 md:h-8 md:w-8 items-center justify-center rounded-full border bg-background/90 backdrop-blur shadow-md opacity-100 md:opacity-0 group-hover:opacity-100 hover:scale-110 hover:bg-accent" />
-        </Carousel>
-      </Section>
+          <article className="group relative h-full overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500/40 hover:shadow-xl hover:shadow-blue-500/20">
+            <div className="relative overflow-hidden border-b">
+              <Image
+                src={p.img || "/placeholder.svg"}
+                alt={`${p.title} screenshot`}
+                width={720}
+                height={400}
+                draggable={false}
+                className="aspect-[18/10] w-full select-none object-cover transition group-hover:scale-[1.02]"
+              />
+            </div>
+
+            <div className="space-y-2 p-4">
+              <h3 className="text-base font-semibold">{p.title}</h3>
+
+              <p className="text-sm text-muted-foreground">
+                {p.desc}
+              </p>
+
+              <p className="text-xs text-muted-foreground">
+                <strong>Tools:</strong> {p.tools}
+              </p>
+
+              <div className="flex gap-3">
+                <a
+                  className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm transition hover:bg-blue-600/10"
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </CarouselItem>
+      ))}
+    </CarouselContent>
+
+    <CarouselPrevious className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border bg-background/90 shadow-md backdrop-blur transition-all hover:scale-110 hover:bg-accent md:h-8 md:w-8 md:opacity-0 md:group-hover:opacity-100 xl:-left-12" />
+
+    <CarouselNext className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border bg-background/90 shadow-md backdrop-blur transition-all hover:scale-110 hover:bg-accent md:h-8 md:w-8 md:opacity-0 md:group-hover:opacity-100 xl:-right-12" />
+  </Carousel>
+</Section>
 
       {/* Certifications */}
       <Section id="certifications" title="Certifications & Courses">
